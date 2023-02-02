@@ -8,10 +8,19 @@
 import SwiftUI
 
 struct CalculationView: View {
+    
+    //MARK: Stored properties
+    @State var inputGiven = ""
+    
+    //MARK: Computed properties
+    
+    
     var body: some View {
         NavigationView{
             VStack{
-                Text("Hello World")
+                TextField("5.5", text: $inputGiven)
+                    .font(.largeTitle)
+                    .padding()
             }
             .navigationTitle("Square Me")
         }
