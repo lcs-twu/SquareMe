@@ -13,7 +13,13 @@ struct CalculationView: View {
     @State var inputGiven = ""
     
     //MARK: Computed properties
-    
+    //convert the input given to an optional double
+    var inputGivenAsOptionalDouble: Double?{
+        guard let inputGivenAsDouble = Double(inputGiven)else{
+            return nil
+        }
+        return inputGivenAsDouble
+    }
     
     var body: some View {
         NavigationView{
